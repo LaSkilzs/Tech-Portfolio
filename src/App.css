@@ -1,0 +1,121 @@
+:root{
+    --violet: #7F055F;
+    --darkblue: #21295C;
+    --lightpurple: #A68EE4;
+    --white: #FFFFFF;
+    --grey: #D2D7DF;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Slabo 27px', serif;
+}
+
+#sidebar{
+  width: 130px;
+  background-color: var(--darkblue);
+  height: 100vh;
+}
+
+.nav-container{
+
+}
+
+.navlist{
+  position: fixed;
+  background-color: var(--white);
+  list-style-type: none;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.navitem{
+  font-size: 25px;
+  padding: 1.5rem;
+  color: var(--lightpurple);
+}
+.navitem:hover{
+  color: var(--darkblue);
+}
+.navtext{
+  text-align: center;
+}
+
+#home{
+  margin-left: 130px;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./images/clouds.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.greeting, .motto{
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  font-style: italic;
+}
+
+.nav-btn{
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.btn{
+  padding: 1.3rem;
+  color: var(--white);
+  background-color: transparent;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn:hover{
+  color: var(--violet);
+  background-color: var(--grey);
+}
+
+#about{
+  margin-left: 130px;
+}
+
+.about-container{
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 330px auto;
+  box-sizing: border-box;
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  height:100vh;
+
+}
+
+.right-side{
+
+}
+
+#projects{
+  margin-left: 130px;
+}
+#blog{
+  margin-left: 130px;
+}
+#contact{
+  margin-left: 130px;
+}
