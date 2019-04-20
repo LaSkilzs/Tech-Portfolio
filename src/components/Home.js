@@ -1,13 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Home = (props) => {
   return (
-  <div className="home-container">
-    <h2>Meet La Fountain</h2>
-    <h4>Live, Love, Learn</h4>
-    <button>see work</button>
-  </div>
+    <section id="home">
+    <div className="home-container">
+      <h2 className="greeting">Hi, I am</h2>
+      <h4 className="greeting">La Fountain</h4>
+      <div className="nav-btn">
+        <button className="btn">view my work</button>
+      </div>
+    </div>
+  </section>
   )
 }
 
