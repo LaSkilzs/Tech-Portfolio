@@ -33,9 +33,6 @@ body {
   height: 100vh;
 }
 
-.nav-container {
-}
-
 .navlist {
   position: fixed;
   background-color: var(--white);
@@ -222,6 +219,8 @@ h3 {
   width: 60%;
   text-align: center;
   margin: auto;
+  margin-bottom: 10px;
+  border: 2px solid black;
 }
 
 .blog-btn {
