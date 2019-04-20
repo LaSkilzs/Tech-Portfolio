@@ -31,6 +31,7 @@ body {
   width: 130px;
   background-color: var(--darkblue);
   height: 100vh;
+  position: fixed;
 }
 
 .navlist {
@@ -66,6 +67,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
 }
 .greeting,
 .motto {

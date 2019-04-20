@@ -1,17 +1,18 @@
-import React from 'react';
+import React from "react";
+import Sidebar from "../components/Sidebar";
 
-const Home = (props) => {
+const Home = props => {
   return (
     <section id="home">
-    <div className="home-container">
-      <h2 className="greeting">Hi, I am</h2>
-      <h4 className="greeting">La Fountain</h4>
-      <div className="nav-btn">
-        <button className="btn">view my work</button>
+      <div className="home-container">
+        <h2 className="greeting">Hi, I am</h2>
+        <h4 className="greeting">La Fountain</h4>
+        <div className="nav-btn">
+          <button className="btn">view my work</button>
+        </div>
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
 export default Home;
