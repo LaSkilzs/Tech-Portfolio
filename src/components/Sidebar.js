@@ -43,17 +43,17 @@ const Sidebar = props => {
             <br />
             <br />
             <br />
-            <Link to="/https://www.linkedin.com/in/la-fountain-649253112/">
+            <Link to="https://www.linkedin.com/in/la-fountain-649253112/">
               <li className="navitem">
                 <i className="fab fa-linkedin-in" />
               </li>
             </Link>
-            <Link to="/https://github.com/LaSkilzs">
+            <Link to="https://www.github.com/LaSkilzs">
               <li className="navitem">
                 <i className="fab fa-github" />
               </li>
             </Link>
-            <Link to="/https://twitter.com/98a8ec669cb8487">
+            <Link to="https://www.twitter.com/98a8ec669cb8487">
               <li className="navitem">
                 <i className="fab fa-twitter" />
               </li>
