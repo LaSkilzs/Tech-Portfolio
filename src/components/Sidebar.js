@@ -1,33 +1,68 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Sidebar = (props) => {
+const Sidebar = props => {
   return (
-<section id="sidebar">
-    <div className="nav-container">
-    <nav className="navbar">
-      <ul className="navlist">
-        <span className="navitem"><strong>La</strong></span>
-        <p className="navtext">Fountain</p>
-        <br/>
-        <br/>
-        <br/>
-        <li className="navitem"><i className="fas fa-home"></i></li>
-        <li className="navitem"><i className="fas fa-id-card"></i></li>
-        <li className="navitem"><i className="fas fa-business-time"></i></li>
-        <li className="navitem"><i className="fas fa-book-open"></i></li>
-        <li className="navitem"><i className="fas fa-envelope-open-text"></i></li>
-        <br />
-        <br />
-        <br />
-        <br />
-        <li className="navitem"><i className="fab fa-linkedin-in"></i></li>
-        <li className="navitem"><i className="fab fa-github"></i></li>
-        <li className="navitem"><i className="fab fa-twitter"></i></li>
-      </ul>
-      </nav>
-    </div>
-  </section>
-  )
-}
+    <section id="sidebar">
+      <div className="nav-container">
+        <nav className="navbar">
+          <ul className="navlist">
+            <span className="navitem">
+              <strong>La</strong>
+            </span>
+            <p className="navtext">Fountain</p>
+            <br />
+            <br />
+            <br />
+            <Link to="/home">
+              <li className="navitem">
+                <i className="fas fa-home" />
+              </li>
+            </Link>
+            <Link to="/about">
+              <li className="navitem">
+                <i className="fas fa-id-card" />
+              </li>
+            </Link>
+            <Link to="/projects">
+              <li className="navitem">
+                <i className="fas fa-business-time" />
+              </li>
+            </Link>
+            <Link to="/blogs">
+              <li className="navitem">
+                <i className="fas fa-book-open" />
+              </li>
+            </Link>
+            <Link to="/contact">
+              <li className="navitem">
+                <i className="fas fa-envelope-open-text" />
+              </li>
+            </Link>
+            <br />
+            <br />
+            <br />
+            <br />
+            <Link to="/https://www.linkedin.com/in/la-fountain-649253112/">
+              <li className="navitem">
+                <i className="fab fa-linkedin-in" />
+              </li>
+            </Link>
+            <Link to="/https://github.com/LaSkilzs">
+              <li className="navitem">
+                <i className="fab fa-github" />
+              </li>
+            </Link>
+            <Link to="/https://twitter.com/98a8ec669cb8487">
+              <li className="navitem">
+                <i className="fab fa-twitter" />
+              </li>
+            </Link>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  );
+};
 
 export default Sidebar;
