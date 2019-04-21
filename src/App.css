@@ -47,7 +47,7 @@ body {
 }
 
 .navitem {
-  font-size: 25px;
+  font-size: 2rem;
   padding: 1.5rem;
   color: var(--lightpurple);
 }
@@ -300,18 +300,28 @@ h3 {
 }
 
 .project-btns button {
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  padding: 5px;
   width: 35%;
-  background-color: var(--lightpurple);
-  color: var(--white);
+  background-color: transparent;
+  color: var(--lightpurple);
   margin: 0.2rem;
   border-radius: 5px;
+  /* display: block; */
 }
+
+.project-btns {
+  visibility: visible;
+}
+/* .project-btns:hover {
+  visibility: visible;
+  background: var(--violet);
+} */
 .project-btns button:hover {
-  background-color: var(--white);
-  color: var(--lightpurple);
+  background-color: var(--lightpurple);
+  color: var(--white);
+  /* display: none; */
 }
 
 #blog {
