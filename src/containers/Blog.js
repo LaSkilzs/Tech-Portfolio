@@ -3,6 +3,8 @@ import query from "../images/query.png";
 import react from "../images/react.png";
 import mobile from "../images/mobie.png";
 import rails from "../images/rails.png";
+import action from "../images/actioncable.png";
+import next from "../images/next.jpg";
 
 class Blog extends React.Component {
   constructor(props) {
@@ -32,6 +34,18 @@ class Blog extends React.Component {
           image: rails,
           summary:
             "Nulla porttitor accumsan tincidunt.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        },
+        {
+          id: 5,
+          image: action,
+          summary:
+            "Nulla porttitor accumsan tincidunt.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
+        },
+        {
+          id: 6,
+          image: next,
+          summary:
+            "Nulla porttitor accumsan tincidunt.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
         }
       ]
     };
@@ -47,13 +61,9 @@ class Blog extends React.Component {
           <div className="blogs">
             {this.state.blogs.map(blog => {
               return (
-                <div className="card" key={blog.id}>
-                  <div className="image-top">
-                    <img src={blog.image} alt="blog preview" />
-                  </div>
-                  <div className="card-content">
-                    <p>{blog.summary}</p>
-                  </div>
+                <div className="card blog-details" key={blog.id}>
+                  <img src={blog.image} alt="blog preview" />
+                  <p>{blog.summary}</p>
                   <button className="blog-btn">see more</button>
                 </div>
               );

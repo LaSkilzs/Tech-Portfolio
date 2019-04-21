@@ -1,7 +1,10 @@
 import React from "react";
 import doggie from "../images/Doggie_Daycare.png";
-import hair from "../images/Shear_Elegance.png";
-import jobs from "../images/Time_Travel.png";
+import hair from "../images/shear.png";
+import jobs from "../images/timetravel.png";
+import car from "../images/carcollection.png";
+import social from "../images/flatbook.png";
+import portfolio from "../images/portfolio.png";
 import Card from "./Card";
 
 class Project extends React.Component {
@@ -21,7 +24,7 @@ class Project extends React.Component {
         {
           id: 2,
           title: "Shear Elegance",
-          language: "Rails, Redux, Rails API, CSS",
+          language: "Rails, Redux, Rails API, CSS, DJ.3, Node.JS, Socket.io",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
           image: hair
@@ -33,6 +36,30 @@ class Project extends React.Component {
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
           image: jobs
+        },
+        {
+          id: 4,
+          title: "Car Collection",
+          language: "React Rails API, BootStrap",
+          summary:
+            "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          image: car
+        },
+        {
+          id: 5,
+          title: "Flatbook",
+          language: "CSS React DAPP Solidarity Rails API",
+          summary:
+            "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          image: social
+        },
+        {
+          id: 6,
+          title: "Portfolio",
+          language: "React, Firebase, CSS",
+          summary:
+            "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          image: portfolio
         }
       ]
     };
@@ -48,7 +75,7 @@ class Project extends React.Component {
         <div className="project-container">
           <div className="title">
             <h1>Projects</h1>
-          <hr className="underline" />
+            <hr className="underline" style={{ align: "left", width: "50%" }} />
           </div>
           <div className="filter">
             <button>All</button>

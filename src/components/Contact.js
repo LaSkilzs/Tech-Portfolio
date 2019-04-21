@@ -28,7 +28,7 @@ const Contact = props => {
             col="2"
             placeholder="message"
           />
-          <button className="blog-btn">submit</button>
+          <button className="contact-btn">submit</button>
         </form>
       </div>
     </section>

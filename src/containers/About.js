@@ -10,31 +10,31 @@ const About = props => {
       <div className="about-container">
         <div className="left-side">
           <div className="avatar">
-            <div className="card">
-              <img src={require("../images/me.jpg")} alt="bio pic" />
-            </div>
-            <h1>MSW, MBA w/finance </h1>
+            <img src={require("../images/me.jpg")} alt="bio pic" />
+          </div>
+          <div className="about-card">
+            <h1>La Fountain, MSW, MBA </h1>
             <h3>Fullstack developer </h3>
-            <button>
-              <i className="fas fa-download" />
-              download resume
-            </button>
-            <div className="bio">
-              <h3>Who am I </h3>
-              <p>
-                Vivamus suscipit tortor eget felis porttitor volutpat.
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
-                dui. Curabitur aliquet quam id dui posuere blandit. Curabitur
-                aliquet quam id dui posuere blandit.
-              </p>
+            <div className="mini-btns">
+              <button className="about-mini-btns">
+                <i className="fas fa-download" />
+                <span> download </span>
+              </button>
+              <button className="about-mini-btns">
+                <i class="fas fa-envelope" />
+                <span> email</span>
+              </button>
+              <button className="about-mini-btns">
+                <i className="fab fa-linkedin-in" />
+                <span> visit </span>
+              </button>
             </div>
           </div>
         </div>
         <div className="right-side">
           <div className="skills">
-            <h3 className="skills-head">tech skills</h3>
             <ol className="skills-list">
-              <li className="item-list">
+              <li className="item-list double">
                 <i className="fab fa-html5" />
                 <h3>HTML</h3>
               </li>
@@ -44,7 +44,7 @@ const About = props => {
               </li>
               <li className="item-list">
                 <i className="fas fa-gem" />
-                <h3>Ruby, Rails</h3>
+                <h3>Ruby on Rails</h3>
               </li>
               <li className="item-list">
                 <i className="fab fa-js" />
@@ -60,7 +60,7 @@ const About = props => {
               </li>
               <li className="item-list">
                 <i className="fab fa-node" />
-                <h3>NodeJs, Express</h3>
+                <h3>NodeJs</h3>
               </li>
               <li className="item-list">
                 <i className="fas fa-database" />
@@ -68,11 +68,29 @@ const About = props => {
               </li>
               <li className="item-list">
                 <i className="fab fa-github" />
-                <h3>GitHub, Github Pages</h3>
+                <h3>GitHub</h3>
+              </li>
+              <li className="item-list">
+                <i class="fas fa-cloud" />
+                <h3>Salesforce</h3>
+              </li>
+              <li className="item-list">
+                <i class="fab fa-hubspot" />
+                <h3>Hubspot</h3>
+              </li>
+              <li className="item-list">
+                <i class="fab fa-adobe" />
+                <h3>Adobe Photoshop</h3>
               </li>
             </ol>
+            <div className="about-buttons">
+              <button className="about-btns">interests</button>
+              <button className="about-btns">hobbies</button>
+              <button className="about-btns">summary</button>
+              <button className="about-btns">tech skills</button>
+            </div>
           </div>
-          <div className="interests">
+          {/* <div className="interests">
             <h3 className="skills-head">interests</h3>
             <ol className="skills-list">
               <li className="item-list">
@@ -100,7 +118,7 @@ const About = props => {
                 <h3>History</h3>
               </li>
             </ol>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
