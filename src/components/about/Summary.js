@@ -12,7 +12,7 @@ const Summary = props => {
       <p>
         Currently, my goals involve empowering others via technology. I believe
         that quality of life in the future is directly correlated to
-        technological innovation and education today.{" "}
+        technological innovation and education today.
       </p>
       <h2>Live Love Learn</h2>
     </div>

@@ -281,10 +281,17 @@ h3 {
 }
 .about-mini-btns {
   padding: 0.2rem;
-  width: 8vw;
+
   font-size: 0.8rem;
   background: var(--lightpurple);
   color: white;
+}
+a.about-mini-btns {
+  padding: 0.2rem;
+  text-decoration: none;
+}
+span.about-mini-btns {
+  width: 8vw;
 }
 
 .about-btns {

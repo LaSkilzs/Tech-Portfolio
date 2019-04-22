@@ -11,7 +11,7 @@ class Project extends React.Component {
   constructor() {
     super();
     this.state = {
-      filter: [],
+      name: "",
       projects: [
         {
           id: 1,
@@ -101,24 +101,21 @@ class Project extends React.Component {
     };
   }
 
-  filterProjects = name => {
-    let filter = this.state.projects.filter(project =>
-      project.language.includes(name)
-    );
-    this.setState({ projects: filter });
-  };
+  filterProjects = name => this.setState({ name });
 
   render() {
-    const project = this.state.projects.map(project => {
-      return (
-        <Card
-          showImage={this.state.showProjects}
-          clickHandler={this.clickHandler}
-          key={project.id}
-          project={project}
-        />
-      );
-    });
+    const project = [...this.state.projects]
+      .filter(project => project.language.includes(this.state.name))
+      .map(project => {
+        return (
+          <Card
+            showImage={this.state.showProjects}
+            clickHandler={this.clickHandler}
+            key={project.id}
+            project={project}
+          />
+        );
+      });
 
     return (
       <section id="projects">
