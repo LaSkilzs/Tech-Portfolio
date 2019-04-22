@@ -14,7 +14,7 @@ const Sidebar = props => {
             <br />
             <br />
             <br />
-            <Link to="/home">
+            <Link to="/">
               <li className="navitem">
                 <i className="fas fa-home" />
               </li>

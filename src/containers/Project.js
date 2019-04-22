@@ -11,38 +11,62 @@ class Project extends React.Component {
   constructor() {
     super();
     this.state = {
-      showProjects: true,
+      filter: [],
       projects: [
         {
           id: 1,
           title: "Sniff Scratch n' Shake",
-          language: "Ruby, Rails, Bootstrap",
+          language: "Ruby Rails Bootstrap",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: doggie
         },
         {
           id: 2,
           title: "Shear Elegance",
-          language: "Rails, Redux, Rails API, CSS, DJ.3, Node.JS, Socket.io",
+          language: "Rails React Redux Rails API CSS DJ.3 Node.JS Socket.io",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: hair
         },
         {
           id: 3,
           title: "Time Travel",
-          language: "Javascript, Rails API",
+          language: "Javascript Rails API",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: jobs
         },
         {
           id: 4,
           title: "Car Collection",
-          language: "React Rails API, BootStrap",
+          language: "React Rails API BootStrap",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: car
         },
         {
@@ -51,25 +75,51 @@ class Project extends React.Component {
           language: "CSS React DAPP Solidarity Rails API",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: social
         },
         {
           id: 6,
           title: "Portfolio",
-          language: "React, Firebase, CSS",
+          language: "React Firebase CSS",
           summary:
             "Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.",
+          author: "La Fountain",
+          goal: {
+            start: "date",
+            name: "name of goal",
+            estimated_time: "time to complete"
+          },
           image: portfolio
         }
       ]
     };
   }
 
-  clickHandler = () => {
-    this.setState({ showProjects: !this.state.showProjects });
+  filterProjects = name => {
+    let filter = this.state.projects.filter(project =>
+      project.language.includes(name)
+    );
+    this.setState({ projects: filter });
   };
 
   render() {
+    const project = this.state.projects.map(project => {
+      return (
+        <Card
+          showImage={this.state.showProjects}
+          clickHandler={this.clickHandler}
+          key={project.id}
+          project={project}
+        />
+      );
+    });
+
     return (
       <section id="projects">
         <div className="project-container">
@@ -78,21 +128,16 @@ class Project extends React.Component {
             <hr className="underline" style={{ align: "left", width: "50%" }} />
           </div>
           <div className="filter">
-            <button>All</button>
-            <button>Rails</button>
-            <button>JavaScript</button>
-            <button>React/Redux</button>
+            <button onClick={() => this.filterProjects(" ")}>All</button>
+            <button onClick={() => this.filterProjects("Rails")}>Rails</button>
+            <button onClick={() => this.filterProjects("Javascript")}>
+              JavaScript
+            </button>
+            <button onClick={() => this.filterProjects("React")}>
+              React/Redux
+            </button>
           </div>
-          <div className="wrapper">
-            {this.state.projects.map(project => (
-              <Card
-                showImage={this.state.showProjects}
-                clickHandler={this.clickHandler}
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </div>
+          <div className="wrapper">{project}</div>
         </div>
       </section>
     );

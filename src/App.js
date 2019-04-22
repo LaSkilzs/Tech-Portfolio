@@ -14,7 +14,7 @@ class App extends React.Component {
       <div className="app-container">
         <Sidebar />
         <Switch>
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/projects" component={Project} />
           <Route path="/blogs" component={Blog} />

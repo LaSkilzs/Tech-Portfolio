@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = props => {
   return (
@@ -7,7 +8,9 @@ const Home = props => {
         <h2 className="greeting">Hi, I am</h2>
         <h4 className="greeting">La Fountain</h4>
         <div className="nav-btn">
-          <button className="btn">view my work</button>
+          <Link to="/projects">
+            <button className="btn">view my work</button>
+          </Link>
         </div>
       </div>
     </section>
