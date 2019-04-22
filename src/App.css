@@ -96,8 +96,8 @@ body {
   border-radius: 5px;
 }
 .btn:hover {
-  color: var(--violet);
-  background-color: var(--grey);
+  color: var(--lightpurple);
+  background-color: var(--white);
 }
 
 /* About Section */
@@ -176,6 +176,62 @@ ol {
   height: 45vh;
 }
 
+.interest .skills-list,
+.hobby .skills-list {
+  height: 20vh !important;
+}
+
+.area-interest {
+  display: block;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem;
+  border: 0.5rem solid var(--white);
+  border-radius: 50%;
+  width: 75%;
+}
+.area-interest h5 {
+  font-size: 3rem;
+  color: var(--lightpurple);
+}
+
+.area-hobby {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 85%;
+  border: 1rem solid var(--lightpurple);
+  border-radius: 15%;
+}
+.area-hobby h2 {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: var(--lightpurple);
+}
+.area-hobby p {
+  font-size: 1.3rem;
+  padding: 0.7rem;
+  color: var(--white);
+}
+.area-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 85%;
+}
+.area-summary h2 {
+  font-size: 1.8rem;
+  padding: 1rem;
+  color: var(--lightpurple);
+}
+.area-summary p {
+  font-size: 1.3rem;
+  padding: 0.7rem;
+  color: var(--white);
+}
+
 .skills-list h3 {
   color: var(--white);
 }
@@ -214,10 +270,9 @@ h3 {
 }
 
 .about-buttons {
-  padding-top: 5rem;
-  display: flex;
-  margin-left: 4rem;
-
+  padding-top: 3rem;
+  /* display: flex; */
+  /* margin-left: 4rem; */
   /* align-items: center;
     align-content: center; */
 }
@@ -226,10 +281,17 @@ h3 {
 }
 .about-mini-btns {
   padding: 0.2rem;
-  width: 8vw;
+
   font-size: 0.8rem;
   background: var(--lightpurple);
   color: white;
+}
+a.about-mini-btns {
+  padding: 0.2rem;
+  text-decoration: none;
+}
+span.about-mini-btns {
+  width: 8vw;
 }
 
 .about-btns {
@@ -266,7 +328,10 @@ h3 {
   display: flex;
   justify-content: center;
 }
-
+.pro-title {
+  color: white;
+  font-size: 1.2rem;
+}
 .filter {
   display: flex;
   justify-content: center;
@@ -303,25 +368,35 @@ h3 {
   font-size: 16px;
   /* font-weight: bold; */
   padding: 5px;
-  width: 35%;
+
   background-color: transparent;
   color: var(--lightpurple);
   margin: 0.2rem;
   border-radius: 5px;
-  /* display: block; */
 }
 
-.project-btns {
-  visibility: visible;
+.project h2,
+.project p,
+.project ol,
+.project li {
+  color: white;
 }
-/* .project-btns:hover {
-  visibility: visible;
-  background: var(--violet);
-} */
+
+.backcard {
+  border: 2rem solid var(--lightpurple);
+  text-align: center;
+}
+.project p {
+  width: 90%;
+}
+
+.project strong {
+  font-size: 1.3rem;
+  color: var(--lightpurple);
+}
 .project-btns button:hover {
   background-color: var(--lightpurple);
   color: var(--white);
-  /* display: none; */
 }
 
 #blog {

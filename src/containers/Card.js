@@ -1,40 +1,48 @@
 import React from "react";
+import FrontCard from "../components/cards/FrontCard";
+import BackCard from "../components/cards/BackCard";
 
-const Card = props => {
-  const { image, title, language, summary } = props.project;
-  if (props.showImage) {
+class Card extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showDetails: false,
+      showButtons: false
+    };
+  }
+
+  buttonHandler = () => {
+    this.setState({ showButtons: !this.state.showButtons });
+  };
+  clickHandler = () => {
+    this.setState({ showDetails: !this.state.showDetails });
+  };
+
+  render() {
+    console.log(this.state);
     return (
       <div className="project-card">
         <div className="project-pic">
-          <div className="project">
-            <img src={image} onClick={props.clickHandler} alt="bio pic" />
-          </div>
-          <div className="project-btns">
-            <button className="proj-btn">readme</button>
-            <button className="proj-btn">github</button>
-            <button className="proj-btn">demo</button>
-          </div>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="projects">
-        <div className="project-pic">
-          <div className="project" onClick={props.clickHandler}>
-            <h1>{title}</h1>
-            <h3>{language}</h3>
-            <h5>{summary}</h5>
-          </div>
-          <div className="project-btns">
-            <button className="proj-btn">readme</button>
-            <button className="proj-btn">github</button>
-            <button className="proj-btn">demo</button>
-          </div>
+          {this.state.showDetails ? (
+            <BackCard
+              project={this.props.project}
+              clickHandler={this.clickHandler}
+              buttonHandler={this.buttonHandler}
+              showButton={this.state.showButtons}
+            />
+          ) : (
+            <FrontCard
+              image={this.props.project.image}
+              title={this.props.project.title}
+              clickHandler={this.clickHandler}
+              buttonHandler={this.buttonHandler}
+              showButton={this.state.showButtons}
+            />
+          )}
         </div>
       </div>
     );
   }
-};
+}
 
 export default Card;
