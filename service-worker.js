@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tech-portfolio/precache-manifest.59b6f5d3aa22a7a6cccd02bdcda13b3f.js"
+  "/Tech-Portfolio/precache-manifest.7404369435ffda1da5954554c6b2bb50.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/tech-portfolio/index.html", {
+workbox.routing.registerNavigationRoute("/Tech-Portfolio/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
