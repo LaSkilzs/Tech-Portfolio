@@ -1,6 +1,6 @@
 {
-  "short_name": "Tech-Portfolio",
-  "name": "Tech-Portfolio",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
